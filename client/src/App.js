@@ -1,6 +1,5 @@
-import React, {useState} from 'react';
 import './App.css';
-
+import React, {useState} from 'react';
 import Nav from './components/Navigation';
 import GoogleLogin from './components/GoogleLogin';
 
@@ -14,7 +13,6 @@ function App() {
   ]);
   const [currentPage, setCurrentPage] = useState(pages[0]);
 
-  
   return (
     <div className="App">
       <Nav 
@@ -24,6 +22,7 @@ function App() {
         pages={pages}
       />
       <GoogleLogin></GoogleLogin>
+
 
 
     </div>
