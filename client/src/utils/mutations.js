@@ -1,16 +1,71 @@
-/* Importing the gql function from the apollo client. */
-import { gql } from "@apollo/client";
+import { gql } from '@apollo/client';
 
-
-/* This is a GraphQL query for LOGIN_USER. */
 export const LOGIN_USER = gql`
-  mutation login($email: String!, $password: String!) {
-    login(email: $email, password: $password) {
-      Auth: token
+  mutation login($password: String!, $email: String!) {
+    login(password: $password, email: $email) {
+      token
       user {
-        _id
         username
+        _id
+        email
       }
     }
   }
+`;
+
+export const ADD_USER = gql`
+  mutation addUser($username: String!, $password: String!, $email: String!) {
+    addUser(username: $username, password: $password, email: $email) {
+      token
+      user {
+        _id
+        username
+        email
+      }
+    }
+  }
+`;
+
+export const ADD_ART = gql`
+  mutation addArt(
+    $artId: String!
+    $title: String!
+    $image: String
+    $link: String
+    $author: [String]
+    $description: String!
+  ) {
+    addArt(
+      artId: $artId
+      title: $title
+      image: $image
+      link: $link
+      author: $author
+      description: $description
+    ) {
+      _id
+      username
+      email
+      artCount
+      savedArt {
+        author
+        description
+        image
+        link
+        artId
+        title
+      }
+    }
+  }
+`;
+
+
+export const REMOVE_ART = gql`
+mutation removeArt($artId: String!) {
+  removeArt(artId: $artId) {
+    _id
+    username
+    artCount
+  }
+}
 `;
