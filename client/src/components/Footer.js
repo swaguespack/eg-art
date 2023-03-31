@@ -1,12 +1,33 @@
 import React from 'react';
+import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
 
-const Footer = () => {
+// Style
+import "../styles/components/footer.css";
+
+function Footer() {
   return (
-    <footer className="w-100 mt-auto text-dark p-4">
-      <div className="container text-center mb-5">
-        <h4>&copy; {new Date().getFullYear()} - Tech Friends</h4>
-      </div>
-    </footer>
+    <div className="footer-div">
+      <footer>
+        <ul>
+          <a href="https://github.com/swaguespack" target="blank">
+            <li>
+              <FaGithub />
+            </li>
+          </a>
+          <a href="https://www.linkedin.com/in/shellby-miller/" target="blank">
+            <li>
+              <FaLinkedin />
+            </li>
+          </a>
+
+          <a href="https://www.instagram.com" target="blank">
+            <li>
+              <FaInstagram />
+            </li>
+          </a>
+        </ul>
+      </footer>
+    </div>
   );
 };
 
