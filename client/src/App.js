@@ -29,6 +29,7 @@ function App() {
           <Route path="/login" element={<Login />}/>
         </Routes>
       </main>
+      <Footer />
     </React.StrictMode>
 
   );
