@@ -1,31 +1,36 @@
+import React from 'react';
+
+// Core style
 import './App.css';
-import React, {useState} from 'react';
-import Nav from './components/Navigation';
-import GoogleLogin from './components/GoogleLogin';
+
+// Components
+import {Navigation, Footer} from './components/';
+
+// Router
+import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
+
+// Pages
+import { Home, About, Login, Gallery } from "./pages/index";
+
+//import GoogleLogin from './components/GoogleLogin';
 
 function App() {
 
-  // Testing navbar
-  const [pages] = useState([
-    {
-      name: "home",
-    }
-  ]);
-  const [currentPage, setCurrentPage] = useState(pages[0]);
+  const location = useLocation();
 
   return (
-    <div className="App">
-      <Nav 
-        class="App-nav"
-        setCurrentPage={setCurrentPage}
-        currentPage={currentPage}
-        pages={pages}
-      />
-      <GoogleLogin></GoogleLogin>
+    <React.StrictMode>
+      <Navigation />
+      <main>
+        <Routes location={location} key={location.pathname}>
+          <Route path="/" element={<Home />}/>
+          <Route path="/about" element={<About />}/>
+          <Route path="/gallery" element={<Gallery />}/>
+          <Route path="/login" element={<Login />}/>
+        </Routes>
+      </main>
+    </React.StrictMode>
 
-
-
-    </div>
   );
 }
 
