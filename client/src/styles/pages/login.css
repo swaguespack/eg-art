@@ -1,0 +1,27 @@
+/* Login Page Styles */
+
+/* Setting the background image for the login page. */
+.login-page {
+  padding: 20px;
+  height: 600px;
+  background-position: center;
+  background-size: cover;
+  min-height: 40vh;
+  flex-direction: column;
+}
+
+/* Login container properties */
+.login-container {
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 10px;
+  max-width: 500px;
+  margin: auto;
+  background-color: pink;
+  box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
+}

@@ -1,6 +1,9 @@
 import { useEffect, useState } from 'react';
 import jwt_decode from "jwt-decode";
 
+// Style
+import "../../styles/pages/login.css"
+
 
 function GoogleLogin() {
   const [ user, setUser ] = useState({});
@@ -37,7 +40,8 @@ useEffect(()=> {
 // If we have no user: show sign in button
 // If we have a user: show logout button
   return (
-    <div className="App">
+    <div className="login-page">
+    <div className="login-container">
       <div id="signInDiv"></div>
       { Object.keys(user).length !== 0 &&
       <button onClick={ (e) => handleSignOut(e)}>Sign Out</button>
@@ -48,6 +52,7 @@ useEffect(()=> {
         <h3>{user.name}</h3>
         </div>
         }
+    </div>
     </div>
   );
 }

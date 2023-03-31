@@ -18,7 +18,6 @@ import Gallery from "./pages/Gallery/Gallery"
 import Login from "./pages/Login/Login"
 
 
-
 export default function App() {
 
   return (

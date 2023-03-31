@@ -6,8 +6,7 @@ footer {
   display: flex;
   justify-content: center;
   border-top: 2px solid black;
-  position: fixed;
-  bottom:0;
+
 }
 
 footer ul li {
