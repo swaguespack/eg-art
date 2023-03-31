@@ -9,18 +9,18 @@ function Footer() {
     <div className="footer-div">
       <footer>
         <ul>
-          <a href="https://github.com/swaguespack" target="blank">
+          <a href="https://github.com/swaguespack/eg-art" target="blank">
             <li>
               <FaGithub />
             </li>
           </a>
-          <a href="https://www.linkedin.com/in/shellby-miller/" target="blank">
+          <a href="https://www.linkedin.com/in/elena-garza-3aa171193/" target="blank">
             <li>
               <FaLinkedin />
             </li>
           </a>
 
-          <a href="https://www.instagram.com" target="blank">
+          <a href="https://www.instagram.com/elenagarza.art/" target="blank">
             <li>
               <FaInstagram />
             </li>
