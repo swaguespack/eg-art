@@ -1,0 +1,1 @@
+// Save favorites from art gallery?
