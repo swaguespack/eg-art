@@ -1,60 +1,102 @@
-import { useEffect, useState } from 'react';
-import jwt_decode from "jwt-decode";
+import React, { useState } from 'react';
+import { Form, Button, Alert } from 'react-bootstrap';
+
+import { LOGIN_USER } from '../../utils/mutations';
+import { useMutation } from '@apollo/client';
+import Auth from '../../utils/auth';
+
+import GoogleLogin from "../../components/GoogleLogin"
 
 // Style
 import "../../styles/pages/login.css"
 
+const LoginForm = () => {
+  const [userFormData, setUserFormData] = useState({ email: '', password: '' });
+  const [validated] = useState(false);
+  const [showAlert, setShowAlert] = useState(false);
 
-function GoogleLogin() {
-  const [ user, setUser ] = useState({});
-
-  function handleCallbackResponse(response){
-    console.log("Encoded JWT ID token: " + response.credential);
-    var userObject = jwt_decode(response.credential);
-    console.log(userObject);
-    setUser(userObject);
-    document.getElementById("signInDiv").hidden = true;
-  }
+  const [login] = useMutation(LOGIN_USER);
   
-  function handleSignOut(event){
-    setUser({});
-    document.getElementById("signInDiv").hidden = false;
-  }
+  const handleInputChange = (event) => {
+    const { name, value } = event.target;
+    setUserFormData({ ...userFormData, [name]: value });
+  };
 
-// useEffect hook empty array only runs this hook once
-useEffect(()=> {
-  /* global google */
-  google.accounts.id.initialize({
-    client_id: "166936624430-1nr0vphagnjt07c4mmbcg4cnjmeiro10.apps.googleusercontent.com",
-    callback: handleCallbackResponse
+  const handleFormSubmit = async (event) => {
+    event.preventDefault();
 
-  });
+    // Check if form has everything (as per react-bootstrap docs)
+    const form = event.currentTarget;
+    if (form.checkValidity() === false) {
+      event.preventDefault();
+      event.stopPropagation();
+    }
 
-  google.accounts.id.renderButton(
-    document.getElementById("signInDiv"),
-    { theme: "outline", size: "large"}
-  );
+    try {
+      const { data } = await login({variables: {...userFormData}});
+      // Add return token to local storage to retrieve from other pages
+      Auth.login(data.login.token);
+    } catch (err) {
+      console.error(err);
+      setShowAlert(true);
+    }
 
-  google.accounts.id.prompt();
-},[]);
-// If we have no user: show sign in button
-// If we have a user: show logout button
+    setUserFormData({
+      username: '',
+      email: '',
+      password: '',
+    });
+  };
+
   return (
     <div className="login-page">
     <div className="login-container">
-      <div id="signInDiv"></div>
-      { Object.keys(user).length !== 0 &&
-      <button onClick={ (e) => handleSignOut(e)}>Sign Out</button>
-      }
+      <Form noValidate validated={validated} onSubmit={handleFormSubmit}>
+        <Alert dismissible onClose={() => setShowAlert(false)} show={showAlert} variant='danger'>
+          Something went wrong with your login credentials!
+        </Alert>
+        <Form.Group>
+          <Form.Label htmlFor='email'>Email</Form.Label>
+          <Form.Control
+            type='text'
+            placeholder='Your email'
+            name='email'
+            onChange={handleInputChange}
+            value={userFormData.email}
+            required
+          />
+          <Form.Control.Feedback type='invalid'>Email is required!</Form.Control.Feedback>
+        </Form.Group>
 
-      { user &&
-      <div>
-        <h3>{user.name}</h3>
-        </div>
-        }
+        <Form.Group>
+          <Form.Label htmlFor='password'>Password</Form.Label>
+          <Form.Control
+            type='password'
+            placeholder='Your password'
+            name='password'
+            onChange={handleInputChange}
+            value={userFormData.password}
+            required
+          />
+          <Form.Control.Feedback type='invalid'>Password is required!</Form.Control.Feedback>
+        </Form.Group>
+        <Button
+          disabled={!(userFormData.email && userFormData.password)}
+          type='submit'
+          variant='success'>
+          Submit
+        </Button>
+      </Form>
+      
+      <div className='googleLogin'>
+        <GoogleLogin />
+      </div>
     </div>
     </div>
+   
+
+
   );
-}
+};
 
-export default GoogleLogin;
+export default LoginForm;

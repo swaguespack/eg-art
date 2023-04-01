@@ -3,6 +3,15 @@ import React from 'react';
 // Core style
 import './App.css';
 
+// Apollo-client
+import {
+  ApolloClient,
+  InMemoryCache,
+  ApolloProvider,
+  createHttpLink,
+} from '@apollo/client';
+import { setContext } from '@apollo/client/link/context';
+
 // Router
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
@@ -17,10 +26,32 @@ import About from "./pages/About/About"
 import Gallery from "./pages/Gallery/Gallery"
 import Login from "./pages/Login/Login"
 
+// Create link to the graphql server using proxy in package.json
+const httpLink = createHttpLink({
+  uri: '/graphql',
+});
 
-export default function App() {
+// Add authorization to header for context in resolvers
+const authLink = setContext((_, { headers }) => {
+  const token = localStorage.getItem('id_token');
+  return {
+    headers: {
+      ...headers,
+      authorization: token ? `Bearer ${token}` : '',
+    },
+  };
+});
+
+// Establish a new connection to the apollo server and new memory cache for queries
+const client = new ApolloClient({
+  link: authLink.concat(httpLink),
+  cache: new InMemoryCache(),
+});
+
+function App() {
 
   return (
+    <ApolloProvider client={client}>
     <BrowserRouter>
 
       <div>
@@ -47,8 +78,8 @@ export default function App() {
       </div>
 
     </BrowserRouter>
-
+    </ApolloProvider>
   );
 }
 
-
+export default App;
