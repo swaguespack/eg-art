@@ -48,12 +48,10 @@ export const ADD_ART = gql`
       email
       artCount
       savedArt {
-        author
-        description
         image
         link
         artId
-        title
+
       }
     }
   }

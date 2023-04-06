@@ -9,7 +9,6 @@ export const GET_ME = gql`
     artCount
     savedArt {
         artId
-        description
         image
         link
     }

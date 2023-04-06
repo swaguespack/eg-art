@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import Auth from '../utils/auth';
 
 // Style
 import "../styles/components/nav.css";
@@ -15,8 +16,12 @@ function Navigation(){
     setActive(!isActive);
   };
 
+
+
   return(
+
     <nav className="navbar">
+
       <Link to="/">          
 
         <img id="logo" src={Logo} alt="@ elena garza" />
@@ -54,11 +59,23 @@ function Navigation(){
           </a>
         </li>
 
-        <li className="nav-item">
+        {Auth.loggedIn()? (
+          <>
+          <li classNam="nav-item">
+            <Link onClick={Auth.logout}>Logout</Link>
+          </li>
+          </>
+        ):(
+
+          <li className="nav-item">
           <Link onClick={handleToggle} to="/login" className="nav-link">
             Log In
           </Link>
         </li>
+
+        )}
+
+
 
         <li className="nav-item">
           <Link onClick={handleToggle} to="/signup" className="nav-link">
@@ -78,7 +95,10 @@ function Navigation(){
       </div>
       
     </nav>
+
+    
   )
 }
 
 export default Navigation;
+
