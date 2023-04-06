@@ -15,6 +15,54 @@ function Navigation(){
   const handleToggle = () =>{
     setActive(!isActive);
   };
+if (Auth.loggedIn()){
+  return(
+  < nav className="navbar">
+    <ul className={`nav-menu ${isActive ? "" : "active"}`}>
+    <li className="nav-item">
+          <Link onClick={handleToggle} to="/" className="nav-link">
+            Home
+          </Link>
+        </li>
+
+        <li className="nav-item">
+          <Link onClick={handleToggle} to="/about" className="nav-link">
+            About
+          </Link>
+        </li>
+
+        <li className="nav-item">
+          <Link onClick={handleToggle} to="/gallery" className="nav-link">
+            Gallery
+          </Link>
+        </li>
+
+        <li className="nav-item">
+          <a
+            onClick={handleToggle}
+            href="https://www.instagram.com/elenagarza.art/"
+            target="_blank"
+            rel="noreferrer"
+            className="nav-link"
+          >
+            Instagram
+          </a>
+        </li>
+
+        <li className="nav-item">
+            
+            <a href="/" onClick={() => Auth.logout()}>
+              Logout
+            </a>
+          </li>
+    </ul>
+
+
+  </nav>
+  )
+  
+} else {
+
 
 
 
@@ -59,23 +107,11 @@ function Navigation(){
           </a>
         </li>
 
-        {Auth.loggedIn()? (
-          <>
-          <li classNam="nav-item">
-            <Link onClick={Auth.logout}>Logout</Link>
-          </li>
-          </>
-        ):(
-
           <li className="nav-item">
           <Link onClick={handleToggle} to="/login" className="nav-link">
             Log In
           </Link>
         </li>
-
-        )}
-
-
 
         <li className="nav-item">
           <Link onClick={handleToggle} to="/signup" className="nav-link">
@@ -98,6 +134,7 @@ function Navigation(){
 
     
   )
+}
 }
 
 export default Navigation;
