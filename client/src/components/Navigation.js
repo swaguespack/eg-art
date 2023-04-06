@@ -60,6 +60,12 @@ function Navigation(){
           </Link>
         </li>
 
+        <li className="nav-item">
+          <Link onClick={handleToggle} to="/signup" className="nav-link">
+           Signup
+          </Link>
+        </li>
+
       </ul>
 
       <div

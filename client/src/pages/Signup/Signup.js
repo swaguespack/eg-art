@@ -1,15 +1,19 @@
 import React, { useState } from 'react';
 import { Form, Button, Alert } from 'react-bootstrap';
-import { useMutation } from '@apollo/client';
-import { ADD_USER } from '../utils/mutations';
-import Auth from '../utils/auth';
 
-const SignupForm = () => {
-  // set initial form state
+import { ADD_USER } from '../../utils/mutations';
+import { useMutation } from '@apollo/client';
+import Auth from '../../utils/auth';
+
+// Style
+import "../../styles/pages/signup.css"
+
+const Signup = () => {
+  // Set initial form state
   const [userFormData, setUserFormData] = useState({ username: '', email: '', password: '' });
-  // set state for form validation
+  // Set state for form validation
   const [validated] = useState(false);
-  // set state for alert
+  // Set state for alert
   const [showAlert, setShowAlert] = useState(false);
   const [signup]= useMutation(ADD_USER);
 
@@ -21,7 +25,7 @@ const SignupForm = () => {
   const handleFormSubmit = async (event) => {
     event.preventDefault();
 
-    // check if form has everything (as per react-bootstrap docs)
+    // Check if form has everything (as per react-bootstrap docs)
     const form = event.currentTarget;
     if (form.checkValidity() === false) {
       event.preventDefault();
@@ -44,7 +48,8 @@ const SignupForm = () => {
   };
 
   return (
-    <>
+    <div className="signup-page">
+    <div className="signup-container">
       {/* This is needed for the validation functionality above */}
       <Form noValidate validated={validated} onSubmit={handleFormSubmit}>
         {/* show alert if server response is bad */}
@@ -97,8 +102,9 @@ const SignupForm = () => {
           Submit
         </Button>
       </Form>
-    </>
+      </div>
+    </div>
   );
 };
 
-export default SignupForm;
+export default Signup;

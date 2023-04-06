@@ -11,8 +11,11 @@ import GoogleLogin from "../../components/GoogleLogin"
 import "../../styles/pages/login.css"
 
 const LoginForm = () => {
+  // Set initial form state
   const [userFormData, setUserFormData] = useState({ email: '', password: '' });
+  // Set state for form validation
   const [validated] = useState(false);
+  // Set state for alert
   const [showAlert, setShowAlert] = useState(false);
 
   const [login] = useMutation(LOGIN_USER);
@@ -91,6 +94,7 @@ const LoginForm = () => {
       <div className='googleLogin'>
         <GoogleLogin />
       </div>
+
     </div>
     </div>
    
