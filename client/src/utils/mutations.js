@@ -29,19 +29,13 @@ export const ADD_USER = gql`
 export const ADD_ART = gql`
   mutation addArt(
     $artId: String!
-    $title: String!
     $image: String
     $link: String
-    $author: [String]
-    $description: String!
   ) {
     addArt(
       artId: $artId
-      title: $title
       image: $image
       link: $link
-      author: $author
-      description: $description
     ) {
       _id
       username

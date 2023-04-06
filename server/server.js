@@ -11,7 +11,7 @@ const PORT = process.env.PORT || 3001;
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-// Connect to apolloserver
+// Connect to apolloserver & integrate with Express
 const startServer = async () => {
   const server = new ApolloServer({
     typeDefs,
