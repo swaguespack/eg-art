@@ -19,7 +19,7 @@ for (const art in arts) {
     />)
 }
 
-
+//JSX to be rendered
 const FeaturedArt = () => {
    return ( 
     <section className="galleryArt">
@@ -28,14 +28,6 @@ const FeaturedArt = () => {
         <h2>Featured Art</h2>
         <div className="galleryImages">
              <div className='arts'>{images}</div>
-            {/* <div>
-                <img className="peice-1"
-                    alt=""
-                    src={waterColorA}
-                />
-                <p>Water Color Flowers</p>
-            </div> */}
-
         </div>
     </div> 
     </section>

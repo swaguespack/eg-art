@@ -6,7 +6,6 @@ import {FeaturedArt} from "../../components";
 // Style
 import "../../styles/pages/gallery.css"
 
-const images = [];
 
 const Gallery = () => {
     return (
