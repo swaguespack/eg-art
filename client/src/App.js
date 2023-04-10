@@ -57,27 +57,27 @@ function App() {
 
       <div>
         <Navigation />
-      </div>
-      
-    <Routes>
-        <Route path='/' element={<Home />}>
-        </Route>
 
-        <Route path="/about" element={<About />}>
-        </Route>
+          <div>
+            <Routes>
+                <Route path='/' element={<Home />}>
+                </Route>
 
-        <Route path="/gallery" element={ <Gallery />}>
-        </Route>
+                <Route path="/about" element={<About />}>
+                </Route>
 
-        <Route path="/login" element={<Login />}>
-        </Route>
+                <Route path="/gallery" element={ <Gallery />}>
+                </Route>
 
-        <Route path="/signup" element={<Signup />}>
-        </Route>
+                <Route path="/login" element={<Login />}>
+                </Route>
 
-    </Routes>
+                <Route path="/signup" element={<Signup />}>
+                </Route>
 
-      <div>
+            </Routes>
+          </div>
+          
         <Footer />
       </div>
 
