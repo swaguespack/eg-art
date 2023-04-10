@@ -9,7 +9,14 @@ const typeDefs = gql`
         savedArt: [Art]
     }
     type Art {
+        _id: ID!
         description: String
+        artId: String
+        image: String
+        link: String
+    }
+    type savedArt {
+        description: String!
         artId: String
         image: String
         link: String
@@ -24,8 +31,8 @@ const typeDefs = gql`
     type Mutation {
         login(email: String!, password: String!): Auth
         addUser(username: String!, email: String!, password: String!): Auth
-        addArt(artId: String! image:String, link:String): User
-        removeArt(artId:String!): User
+        saveArt(input:savedArt!): User
+        removeArt(artId:ID!): User
     }   
 `;
 
