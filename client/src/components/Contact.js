@@ -1,13 +1,25 @@
-import React from "react";
+import React, {useState} from "react";
 
 const Contact = () => {
+    const [submit, setSubmit] = useState(false);
+    const handleSubmit = (e) => {
+        e.preventDefault(e);
+        setTimeout(() => {
+            setSubmit(true);
+        }, 100)
+    }
+
+    if (submit) {
+        return;
+    }
+
     return(
     <div className="card bg-white w-25">
         <div className="card-header bg-dark text-center">
             <h1>Contact</h1>
         </div>
         <div className="card-body m-5">
-        <form>
+        <form onSubmit={handleSubmit}>
             <div>
             <label>Name: </label>
             <input
