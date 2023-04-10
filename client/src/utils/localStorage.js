@@ -1,6 +1,6 @@
 // Save favorites from art gallery
 
-export const getSavedArtIds = () => {
+/*export const getSavedArtIds = () => {
     const savedArtIds = localStorage.getItem('saved_art')
       ? JSON.parse(localStorage.getItem('saved_art'))
       : [];
@@ -30,3 +30,4 @@ export const getSavedArtIds = () => {
   
     return true;
   };
+  */

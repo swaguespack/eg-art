@@ -40,31 +40,6 @@ const resolvers = {
             }
             const token = signToken(user);
             return {token, user};
-        },
-        saveArt: async(parent, args, context) => {
-            if(context.user) {
-              const updatedUser = await User.findOneAndUpdate(
-                { _id: context.user._id },
-                { $addToSet: { savedArt: args } },
-                { new: true, runValidators: true }
-              );
-              return updatedUser;
-            } 
-
-            throw new AuthenticationError('User Not Logged In')
-          },
-        removeArt: async(parent, { artId }, context) => {
-          if(context.user) {
-            const updatedUser = await User.findOneAndUpdate(
-              {_id: context.user._id},
-              {$pull: { savedArt: { artId: artId}}},
-              {new: true}
-            );
-            if(!updatedUser) {
-              throw new AuthenticationError ('Couldnt find user with that Id')
-            }
-            return updatedUser;
-          }
         }
     }
 };

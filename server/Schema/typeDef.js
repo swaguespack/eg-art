@@ -5,21 +5,7 @@ const typeDefs = gql`
         _id: ID
         username: String
         email: String
-        artCount: Int
-        savedArt: [Art]
-    }
-    type Art {
-        _id: ID!
-        description: String
-        artId: String
-        image: String
-        link: String
-    }
-    type savedArt {
-        description: String!
-        artId: String
-        image: String
-        link: String
+
     }
     type Auth {
         token: ID!
@@ -31,8 +17,7 @@ const typeDefs = gql`
     type Mutation {
         login(email: String!, password: String!): Auth
         addUser(username: String!, email: String!, password: String!): Auth
-        saveArt(input:savedArt!): User
-        removeArt(artId:ID!): User
+
     }   
 `;
 
