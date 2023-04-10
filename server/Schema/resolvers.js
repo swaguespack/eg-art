@@ -7,10 +7,9 @@ const resolvers = {
         me: async (parent, args, context ) => {
             if(context.user){
               console.log('me query called')
-            const user = await User.findOne({ _id: context.user._id
-            });
+            const userData = await User.findOne({ _id: context.user._id}).select('-__v -password');
         
-            return user
+            return userData
           }
 
           throw new AuthenticationError('Not Logged In')
@@ -42,7 +41,7 @@ const resolvers = {
             const token = signToken(user);
             return {token, user};
         },
-        addArt: async(parent, args, context) => {
+        saveArt: async(parent, args, context) => {
             if(context.user) {
               const updatedUser = await User.findOneAndUpdate(
                 { _id: context.user._id },
@@ -70,4 +69,4 @@ const resolvers = {
     }
 };
 
-module.exports = resolvers;
+module.exports = resolvers; 
