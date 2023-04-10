@@ -29,24 +29,8 @@ export const getMe = (token) => {
   };
   
   // save art data for a logged in user
-  export const saveArt = (artData, token) => {
-    return fetch('/api/users', {
-      method: 'PUT',
-      headers: {
-        'Content-Type': 'application/json',
-        authorization: `Bearer ${token}`,
-      },
-      body: JSON.stringify(artData),
-    });
-  };
+
   
   // remove saved art data for a logged in user
-  export const deleteArt = (artId, token) => {
-    return fetch(`/api/users/art/${artId}`, {
-      method: 'DELETE',
-      headers: {
-        authorization: `Bearer ${token}`,
-      },
-    });
-  };
+
   

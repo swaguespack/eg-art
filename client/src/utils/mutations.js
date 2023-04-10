@@ -26,38 +26,4 @@ export const ADD_USER = gql`
   }
 `;
 
-export const ADD_ART = gql`
-  mutation addArt(
-    $artId: String!
-    $image: String
-    $link: String
-  ) {
-    addArt(
-      artId: $artId
-      image: $image
-      link: $link
-    ) {
-      _id
-      username
-      email
-      artCount
-      savedArt {
-        image
-        link
-        artId
 
-      }
-    }
-  }
-`;
-
-
-export const REMOVE_ART = gql`
-mutation removeArt($artId: String!) {
-  removeArt(artId: $artId) {
-    _id
-    username
-    artCount
-  }
-}
-`;
