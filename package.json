@@ -1,7 +1,11 @@
 { 
-  "name": "eg-art",
+  "name": "artfolio",
+  "description": "A portfolio site for art.",
   "version": "1.0.0",
-  "description": "",
+  "engines":{
+    "node": "v18.14.0"
+  },
+  
   "main": "server/server.js",
   "scripts": {
     "start": "node server/server.js",
