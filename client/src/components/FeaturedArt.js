@@ -1,30 +1,30 @@
 import React from "react";
 
-// import { waterColorA }  from "../imgs/index";
-// import { arts } from "../imgs/gallery.js";
-import {arts} from "../utils/artData"
+import "../styles/components/artGallery.css"
 
-// empty array for images
-// const images = [];
+import {arts} from "../utils/artData"
+import Card from "react-bootstrap/Card"
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
 
 export default function FeaturedArt(){
     return (
-        <section id="gallery" className="container gallery-container">
-            <div className="row">
-                {arts.map((art) =>(
-                    <div className="col">
-
-                        <div className="card artCard">
-                            <img src={art.image} alt={art.alt} className=""/>
-
-                        </div>
-
-                    </div>
+        <section id="gallery" className="gallery-container">
+            <Row>
+                {arts.map((art, index) =>(
+                    <Col className="single">
+                        <Card id="art-card" key={index}>
+                                <Card.Img variant='top' src={art.image} alt={art.alt} className="artimg"/>
+                                <Card.Body>
+                                    <Card.Title>{art.title}</Card.Title>
+                                    <Card.Text>{art.description}</Card.Text>
+                                </Card.Body>
+                            
+                        </Card>
+                    </Col>
                 ))}
 
-            </div>
-
-
+            </Row>
         </section>
     )
 }
