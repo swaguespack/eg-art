@@ -11,9 +11,9 @@ export default function FeaturedArt(){
     return (
         <section id="gallery" className="gallery-container">
             <Row>
-                {arts.map((art, index) =>(
-                    <Col className="single">
-                        <Card id="art-card" key={index}>
+                {arts.map((art) =>(
+                    <Col key={art.id} className="single">
+                        <Card id="art-card" >
                                 <Card.Img variant='top' src={art.image} alt={art.alt} className="artimg"/>
                                 <Card.Body>
                                     <Card.Title>{art.title}</Card.Title>
