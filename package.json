@@ -9,7 +9,6 @@
   "main": "server/server.js",
   "scripts": {
     "start": "node server/server.js",
-    "start-client": "cd client run start-client",
     "test": "echo \"Error: no test specified\" && exit 1",
     "develop": "concurrently \"cd server && npm start\" \"cd client && npm start\"",
     "seed": "cd server && npm run seed",
