@@ -6,16 +6,12 @@ import {FeaturedArt} from "../../components";
 // Style
 import "../../styles/pages/gallery.css"
 
-const images = [];
 
 const Gallery = () => {
     return (
         <div className = "gallery-page">
-            <h1>Gallery Page.</h1>
-            <div>
+            <h1>Gallery Page</h1>
             <FeaturedArt />
-            </div>
-            <div className='artPieces'>{}</div>
         </div>
     )
 }

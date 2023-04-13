@@ -1,45 +1,69 @@
 import React from "react";
 
-// import { waterColorA }  from "../imgs/index";
-import { arts } from "../imgs/gallery.js";
+import "../styles/components/artGallery.css"
 
-// empty array for images
-const images = [];
+import {arts} from "../utils/artData"
+import Card from "react-bootstrap/Card"
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
 
-//to loop through arts and push to images array
-for (const art in arts) {
-    images.push(<img
-        key={art}
-        className='arts'
-        alt={art}
-        src={arts[art].image}
-        aria-label={art}
-        // role='button'
-        // onClick={displaySomething}
-    />)
+export default function FeaturedArt(){
+    return (
+        <section id="gallery" className="gallery-container">
+            <Row>
+                {arts.map((art, index) =>(
+                    <Col className="single">
+                        <Card id="art-card" key={index}>
+                                <Card.Img variant='top' src={art.image} alt={art.alt} className="artimg"/>
+                                <Card.Body>
+                                    <Card.Title>{art.title}</Card.Title>
+                                    <Card.Text>{art.description}</Card.Text>
+                                </Card.Body>
+                            
+                        </Card>
+                    </Col>
+                ))}
+
+            </Row>
+        </section>
+    )
 }
 
 
-const FeaturedArt = () => {
-   return ( 
-    <section className="galleryArt">
+
+
+
+
+
+
+
+
+//to loop through arts and push to images array
+// for (const art in arts) {
+//     images.push(<img
+//         key={art}
+//         className='arts'
+//         alt={art}
+//         src={arts[art].image}
+//         aria-label={art}
+//         // role='button'
+//         // onClick={displaySomething}
+//     />)
+// }
+
+// //JSX to be rendered
+// const FeaturedArt = () => {
+//    return ( 
+//     <section className="galleryArt">
      
-    <div className="container">
-        <h2>Featured Art</h2>
-        <div className="galleryImages">
-             <div className='arts'>{images}</div>
-            {/* <div>
-                <img className="peice-1"
-                    alt=""
-                    src={waterColorA}
-                />
-                <p>Water Color Flowers</p>
-            </div> */}
+//     <div className="container">
+//         <h2>Featured Art</h2>
+//         <div className="galleryImages">
+//              <div className='card arts'>{images}</div>
+//         </div>
+//     </div> 
+//     </section>
+//    );
+// };
 
-        </div>
-    </div> 
-    </section>
-   );
-};
-
-export default FeaturedArt;
+// export default FeaturedArt;

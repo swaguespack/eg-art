@@ -6,8 +6,8 @@ import "../styles/components/footer.css";
 
 function Footer() {
   return (
-    <div className="footer-div">
-      <footer>
+    <div className="footer-div w-100 mt-auto">
+      <footer className='container text-center mb-5'>
         <ul>
           <a href="https://github.com/swaguespack/eg-art" target="blank">
             <li>
