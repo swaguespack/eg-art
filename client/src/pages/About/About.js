@@ -6,9 +6,9 @@ import "../../styles/pages/about.css"
 const About = () => {
     return (
         <div className = "about-page">
-            <h1>About Page.</h1>
-            <Contact />
+            <h1>About</h1>
+            <Contact className="contact-container"/>
         </div>
     )
 }
-export default About
+export default About;

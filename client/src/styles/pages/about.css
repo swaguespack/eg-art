@@ -1,8 +1,13 @@
 .about-page {
+    display: flex;
     padding: 20px;
     height: 600px;
     background-position: center;
     background-size: cover;
     min-height: 40vh;
-    flex-direction: column;
+    /* flex-direction: column; */
+  }
+
+  .contact-container {
+
   }

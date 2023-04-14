@@ -9,7 +9,7 @@ const Contact = () => {
         }, 100)
     }
 
-    if (submit) {
+    if (submit) { 
         return;
     }
 
