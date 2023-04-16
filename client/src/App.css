@@ -1,3 +1,4 @@
+
 * {
     box-sizing: border-box;
 } 
@@ -10,8 +11,23 @@ body {
 .App {
     display: flex;
     flex-direction: column;
+    text-align: center;
+    background-color: #f4f1ea;
 }
 
 .page-container {
     min-height: 100vh;
+}
+
+.page-header {
+    min-height: 15vh;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: #011dcb;
+        font-family: 'Righteous',
+        cursive;
+        text-shadow: 5px 5px 10px rgb(255, 255, 255);
 }

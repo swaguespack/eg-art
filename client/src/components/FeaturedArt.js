@@ -6,6 +6,7 @@ import {arts} from "../utils/artData"
 import Card from "react-bootstrap/Card"
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
+import Button from 'react-bootstrap/Button'
 
 
 // function FilterableGalleryTable({arts}){
@@ -16,35 +17,19 @@ import Col from 'react-bootstrap/Col'
 //     );
 // }
 
-// function SearchBar(){
-//     return (
-//         <form>
-//             <input
-//             type="text"
-//             placeholder="Search Artist"
-//             />
-//             <label>
-//                 <input
-//                 type="checkbox"
-                
-//                 />
-//                 Only show art for sale
-//             </label>
-//         </form>
-//     );
-// }
 
 export default function FeaturedArt(){
     return (
         <section id="gallery" className="gallery-container">
             <Row>
                 {arts.map((art) =>(
-                    <Col className="p-4 single">
+                    <Col  className="p-4 single">
                         <Card id="art-card" className="m-20" key={art.id}>
                                 <Card.Img variant='top' src={art.image} alt={art.alt} className="artImg"/>
                                 <Card.Body className="card-body">
                                     <Card.Title className="card-title">{art.title}</Card.Title>
                                     <Card.Text className="card-text">{art.description}</Card.Text>
+                                    <Button className="m-2 p-2 btn-dark">Save</Button>
                                 </Card.Body>
                             
                         </Card>

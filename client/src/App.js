@@ -2,7 +2,7 @@ import React from 'react';
 
 // Core style
 import './App.css';
-
+import './index.css'
 // Apollo-client
 import {
   ApolloClient,
@@ -56,6 +56,9 @@ function App() {
     <BrowserRouter>
 
       <div>
+        <header className="page-header">
+          <h1 className='display-1'>artfolio</h1>
+        </header>
         <Navigation />
 
           <div className='page-container container'>
