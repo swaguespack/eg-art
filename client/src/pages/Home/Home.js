@@ -7,16 +7,20 @@ import "./home.css"
 const Home = () => {
     return (
         <Container className='home-page'>
-            <Row xs={1} md={2} className='g-4'>
-                <Col style={{ border: '1px dotted' }}>
+
+                <Col>
+                    <Card border="dark" className='mt-3 p-5'> 
                     <h3>Description of Application</h3>
                     <p>All the Text to describe this application.</p>
+                    </Card>
                 </Col>
-                <Col>
-                    <Card>this is my card</Card>
+                <Col >
+                    <Card className='p-5'>
+                        featured art
+                    </Card>
                 </Col>
-            </Row>
+
         </Container>
     )
 }
-export default Home
+export default Home;
