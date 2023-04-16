@@ -22,7 +22,7 @@ const userSchema = new Schema(
       required: true,
     },
     // Set savedArt to be an array of data that adheres to the artSchema
-    savedArt: [artSchema],
+    // savedArt: [artSchema],
   },
   // Set this to use virtual below
   {

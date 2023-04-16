@@ -1,10 +1,19 @@
 const db = require('./connection');
-const { User} = require('../models');
+const { User, Art} = require('../models');
 
 db.once('open', async () => {
   
     await User.deleteMany();
-  
+    await Art.deleteMany();
+
+
+    await Art.create ({
+        _id: 0,
+        title: 'New Art',
+        artist: 'New Artist',
+        
+    });
+
     await User.create({
         username: 'Shellby',
         email: 'shellby@testmail.com',

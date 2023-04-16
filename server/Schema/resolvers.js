@@ -1,6 +1,7 @@
 const { AuthenticationError } = require('apollo-server-express');
-const { User } = require('../models');
+const { User, Art } = require('../models');
 const { signToken } = require('../utils/auth');
+const artSchema = require('../models/Art');
 
 const resolvers = {
     Query: {
@@ -13,7 +14,11 @@ const resolvers = {
           }
 
           throw new AuthenticationError('Not Logged In')
-        }
+        },
+
+        arts: async()=> {
+          return Art.find().sort({ createdAt: -1 });
+        },
     },
 
     Mutation: {
