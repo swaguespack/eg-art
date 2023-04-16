@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import {Form, Button} from "react-bootstrap";
 
 const Contact = () => {
     const [submit, setSubmit] = useState(false);
@@ -14,50 +15,28 @@ const Contact = () => {
     }
 
     return(
-    <div className="card bg-white w-25">
-        <div className="card-header bg-dark text-center">
-            <h1>Contact</h1>
-        </div>
-        <div className="card-body m-5">
-        <form onSubmit={handleSubmit}>
-            <div>
-            <label>Name: </label>
-            <input
-                type="text"
-                placeholder="Your name"
-                name="name"
-                className=""
-                required
-            />
-            </div>
-            <div>
-            <label>Email: </label>
-                <input
-                    type="email"
-                    placeholder="Email"
-                    name="email"
-                    className=""
-                    required
-                />
-            </div>
-            <div>
-            <label>Message: </label>
-                <textarea
-                placeholder="Your message"
-                name="message"
-                className=""
-                required
-            />
-            </div>
-            <div>
-                <button className="btn" type="submit">
-                Submit
-                </button>
-            </div>
-        </form>
-        </div>
 
-    </div>
+            <Form onSubmit={handleSubmit}
+
+            >
+                <Form.Group className="mb-3" controlId="form.Name">
+                    <Form.Label>Name</Form.Label>
+                    <Form.Control type="text" placeholder="Enter name" />
+                </Form.Group>
+                <Form.Group controlId="form.Email">
+                    <Form.Label>Email address</Form.Label>
+                    <Form.Control type="email" placeholder="name@example.com" />
+                </Form.Group>
+                <Form.Group controlId="form.Textarea">
+                    <Form.Label>Message</Form.Label>
+                    <Form.Control as="textarea" rows={3} />
+                </Form.Group>
+                <Button variant='primary' type='submit'>
+                    Send
+                </Button>
+            </Form>
+
+
 )
 };
 

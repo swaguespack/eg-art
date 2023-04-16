@@ -4,7 +4,7 @@ import React from 'react'
 import {FeaturedArt} from "../../components";
 
 // Style
-import "../../styles/pages/gallery.css"
+import "./gallery.css"
 
 
 const Gallery = () => {

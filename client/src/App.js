@@ -58,7 +58,7 @@ function App() {
       <div>
         <Navigation />
 
-          <div>
+          <div className='page-container container'>
             <Routes>
                 <Route path='/' element={<Home />}>
                 </Route>

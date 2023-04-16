@@ -10,3 +10,15 @@ export const GET_ME = gql`
   }
 }
 `;
+
+export const QUERY_ART = gql`
+{
+  arts {
+    title
+    artist
+    _id
+    image
+    link
+  }
+}
+`;
