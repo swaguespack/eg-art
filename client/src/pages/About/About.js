@@ -6,19 +6,23 @@ import "../../styles/pages/about.css"
 
 const About = () => {
     return (
-        <Container>
+      
         <div className= "d-flex p-2 justify-content-around align-items-center">
             <div className='flex-row mb-3'>
-                <div className='p-2'>
-                <h1>Contact</h1>
+                <Container className='col p-2'>
+
+                    <h1>Contact</h1>
                 <Contact />
-                </div>
+                </Container>
+
+                <Container className='col'>
                 <div className='p-2 bg-primary'>
                     <h1>About Page</h1>
                 </div>
+                </Container>
             </div>
         </div>
-        </Container>
+        
     )
 }
 export default About
