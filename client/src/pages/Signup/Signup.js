@@ -6,7 +6,7 @@ import { useMutation } from '@apollo/client';
 import Auth from '../../utils/auth';
 
 // Style
-import "../../styles/pages/signup.css"
+import "./signup.css"
 
 const Signup = () => {
   // Set initial form state

@@ -2,7 +2,7 @@ import React from 'react'
 import {Contact} from '../../components/index'
 // Style
 import {Container} from 'react-bootstrap';
-import "../../styles/pages/about.css"
+import "./about.css"
 
 const About = () => {
     return (

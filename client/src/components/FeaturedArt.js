@@ -7,13 +7,40 @@ import Card from "react-bootstrap/Card"
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 
+
+// function FilterableGalleryTable({arts}){
+//     return(
+//         something
+//         // <SearchBar/>
+//         // <GalleryTable/>
+//     );
+// }
+
+// function SearchBar(){
+//     return (
+//         <form>
+//             <input
+//             type="text"
+//             placeholder="Search Artist"
+//             />
+//             <label>
+//                 <input
+//                 type="checkbox"
+                
+//                 />
+//                 Only show art for sale
+//             </label>
+//         </form>
+//     );
+// }
+
 export default function FeaturedArt(){
     return (
         <section id="gallery" className="gallery-container">
             <Row>
-                {arts.map((art, index) =>(
+                {arts.map((art) =>(
                     <Col className="single">
-                        <Card id="art-card" key={index}>
+                        <Card id="art-card" key={art.id}>
                                 <Card.Img variant='top' src={art.image} alt={art.alt} className="artimg"/>
                                 <Card.Body>
                                     <Card.Title>{art.title}</Card.Title>
@@ -26,10 +53,12 @@ export default function FeaturedArt(){
 
             </Row>
         </section>
-    )
+    );
 }
 
-
+// export default function FeaturedArt() {
+//     return <FilterableGalleryTable arts = {arts} />
+// }
 
 
 

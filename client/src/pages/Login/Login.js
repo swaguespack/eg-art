@@ -8,7 +8,7 @@ import Auth from '../../utils/auth';
 import GoogleLogin from "../../components/GoogleLogin"
 
 // Style
-import "../../styles/pages/login.css"
+import "./login.css"
 
 const LoginForm = () => {
   // Set initial form state

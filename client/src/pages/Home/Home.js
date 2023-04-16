@@ -1,11 +1,11 @@
 import React from 'react'
 
 // Style
-import "../../styles/pages/home.css"
+import "./home.css"
 
 const Home = () => {
     return (
-        <main>
+        <main className='home-page'>
             <div className='flex-row justify-center'>
                 <div
                     className='col-12 col-md-10 mb-3 p-3'
