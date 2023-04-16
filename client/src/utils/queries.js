@@ -14,10 +14,11 @@ export const GET_ME = gql`
 export const QUERY_ART = gql`
 {
   arts {
-    _id
     title
     artist
-    medium
+    _id
+    image
+    link
   }
 }
 `;
