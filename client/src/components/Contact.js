@@ -16,7 +16,7 @@ const Contact = () => {
 
     return(
 
-            <Form onSubmit={handleSubmit}
+            <Form className="p-4" onSubmit={handleSubmit}
 
             >
                 <Form.Group className="mb-3" controlId="form.Name">
@@ -31,7 +31,7 @@ const Contact = () => {
                     <Form.Label>Message</Form.Label>
                     <Form.Control as="textarea" rows={3} />
                 </Form.Group>
-                <Button variant='primary' type='submit'>
+                <Button variant='primary' type='submit' className="mt-4">
                     Send 
                 </Button>
             </Form>
