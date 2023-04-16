@@ -1,28 +1,17 @@
 
 * {
     box-sizing: border-box;
-    
 } 
 
-body {
-    margin: 0;
-    padding: 0;    
-}
-
-.App {
+.container {
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     text-align: center;
-
 }
 
-.page-container {
-    min-height: 100vh;
-}
 
 .page-header {
-    min-height: 15vh;
-
         display: flex;
         flex-direction: column;
         align-items: center;
