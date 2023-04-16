@@ -13,7 +13,7 @@ export default function FeaturedArt(){
             <Row>
                 {arts.map((art) =>(
                     <Col key={art.id} className="single">
-                        <Card id="art-card" >
+                        <Card key={art.artId} id="art-card" >
                                 <Card.Img variant='top' src={art.image} alt={art.alt} className="artimg"/>
                                 <Card.Body>
                                     <Card.Title>{art.title}</Card.Title>
