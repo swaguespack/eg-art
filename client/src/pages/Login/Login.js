@@ -61,6 +61,7 @@ const LoginForm = () => {
         <Form.Group>
           <Form.Label htmlFor='email'>Email</Form.Label>
           <Form.Control
+            className="mb-3"
             type='text'
             placeholder='Your email'
             name='email'
@@ -74,6 +75,7 @@ const LoginForm = () => {
         <Form.Group>
           <Form.Label htmlFor='password'>Password</Form.Label>
           <Form.Control
+            className="mb-3"
             type='password'
             placeholder='Your password'
             name='password'
@@ -86,7 +88,8 @@ const LoginForm = () => {
         <Button
           disabled={!(userFormData.email && userFormData.password)}
           type='submit'
-          variant='success'>
+          variant='primary'
+          className="m-3">
           Submit
         </Button>
       </Form>

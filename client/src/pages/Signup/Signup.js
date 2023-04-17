@@ -51,7 +51,7 @@ const Signup = () => {
     <div className="signup-page">
     <div className="signup-container">
       {/* This is needed for the validation functionality above */}
-      <Form noValidate validated={validated} onSubmit={handleFormSubmit}>
+      <Form className="p-4" noValidate validated={validated} onSubmit={handleFormSubmit}>
         {/* show alert if server response is bad */}
         <Alert dismissible onClose={() => setShowAlert(false)} show={showAlert} variant='danger'>
           Something went wrong with your signup!
@@ -60,6 +60,7 @@ const Signup = () => {
         <Form.Group>
           <Form.Label htmlFor='username'>Username</Form.Label>
           <Form.Control
+            className="mb-3"
             type='text'
             placeholder='Your username'
             name='username'
@@ -73,6 +74,7 @@ const Signup = () => {
         <Form.Group>
           <Form.Label htmlFor='email'>Email</Form.Label>
           <Form.Control
+            className="mb-3"
             type='email'
             placeholder='Your email address'
             name='email'
@@ -86,6 +88,7 @@ const Signup = () => {
         <Form.Group>
           <Form.Label htmlFor='password'>Password</Form.Label>
           <Form.Control
+            className="mb-3"
             type='password'
             placeholder='Your password'
             name='password'
@@ -98,7 +101,8 @@ const Signup = () => {
         <Button
           disabled={!(userFormData.username && userFormData.email && userFormData.password)}
           type='submit'
-          variant='success'>
+          variant='primary'
+          className="mt-4">
           Submit
         </Button>
       </Form>
