@@ -116,7 +116,7 @@ if (Auth.loggedIn()){
 
         <li className="nav-item">
           <Link onClick={handleToggle} to="/signup" className="nav-link">
-           Signup
+           Sign Up
           </Link>
         </li>
 
