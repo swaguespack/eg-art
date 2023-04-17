@@ -1,8 +1,9 @@
 import React from 'react'
-import {Container, Row, Col, Card} from 'react-bootstrap'
+import {Container,  Col, Card} from 'react-bootstrap'
 
 // Style
 import "./home.css"
+import Carosol from '../../components/Carosol'
 
 const Home = () => {
     return (
@@ -45,7 +46,7 @@ const Home = () => {
                 </Col>
                 <Col >
                     <Card className='p-5'>
-                        featured art
+                        <Carosol/>
                     </Card>
                 </Col>
 
