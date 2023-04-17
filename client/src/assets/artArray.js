@@ -4,11 +4,6 @@ import Eddie2 from './artImgs/Eddie2.png';
 import Eddie3 from './artImgs/Eddie3.png';
 import Eddie4 from './artImgs/Eddie4.png';
 
-// import Elana1 from './artImgs/Elana1.png';
-// import Elana2 from './artImgs/Elana2.png';
-// import Elana3 from './artImgs/Elana3.png';
-// import Elana4 from './artImgs/Elana4.png';
-
 import Ewang1 from './artImgs/Ewang1.png';
 import Ewang2 from './artImgs/Ewang2.png';
 import Ewang3 from './artImgs/Ewang3.png';
@@ -22,57 +17,81 @@ import Tyler2 from './artImgs/Tyler2.png';
 import Tyler3 from './artImgs/Tyler3.png';
 
 
+import Elena1 from './artImgs/Elana1.png';
+import Elena2 from './artImgs/Elana2.png';
+import Elena3 from './artImgs/Elana3.png';
+import Elena4 from './artImgs/Elana4.png';
+
+
 export const ARTS = [
-    { id:0, artist: "Yuki", medium: "ink", title: "KibbleLyf", sale: true,
+    {   id:0, artist: "Eddie", medium: "leds, plastic, wire", title: "", sale: true,
         img:Eddie1,
     },
-    { id:1, artist: "Kona", medium: "oil paint", title: "Southward Paw", sale: false,
+    {   id:1, artist: "Eddie", medium: "memory cards, hard drives, lightbulbs, wire", title: "Southward Paw", sale: false,
         img: Eddie2
     },
-    { id:2, artist: "Mika", medium: "alternative process", title: "Celestial Bodies", sale: true,
+    {   id:2, artist: "Eddie", medium: "led globe lights, arduino, wire, wood", title: "Celestial Bodies", sale: true,
         img: Eddie3 
-},
-    { id:3, artist: "Tyler", medium: "sculpture", title: "Hand of Time", sale: true,
-        img: Eddie4 },
-    { id:4, artist: "Ewang", medium: "photography", title: "ATL", sale: false, 
-        img: Ewang1 },
-    { id:5, artist: "Ewang", medium: "photography", title: "Saturday", sale: true,
+    },
+    {   id:3, artist: "Eddie", medium: "sculpture", title: "Hand of Time", sale: true,
+        img: Eddie4 
+    },
+    {   id:4, artist: "Ewang", medium: "photograph", title: "ATL", sale: false, 
+        img: Ewang1 
+    },
+    {   id:5, artist: "Ewang", medium: "photograph", title: "Saturday", sale: true,
         img: Ewang2 },
     {
-        id: 5, artist: "Ewang", medium: "photography", title: "Saturday", sale: true,
+        id: 6, artist: "Ewang", medium: "photograph", title: "Saturday", sale: true,
         img: Ewang3
     },
     {
-        id: 5, artist: "Ewang", medium: "photography", title: "Saturday", sale: true,
-        img: { Ewang6 }
+        id: 7, artist: "Ewang", medium: "photograph", title: "Saturday", sale: true,
+        img:  Ewang6 
     },
     {
-        id: 5, artist: "Ewang", medium: "photography", title: "Saturday", sale: true,
+        id: 8, artist: "Ewang", medium: "photograph", title: "Saturday", sale: true,
         img: Ewang8
     },
     {
-         id: 5, artist: "Ewang", medium: "photography", title: "Saturday", sale: true,
+        id: 9, artist: "Ewang", medium: "photograph", title: "Saturday", sale: true,
         img: Tyler1
     },
     {
-        id: 5, artist: "Ewang", medium: "photography", title: "Saturday", sale: true,
+        id: 10, artist: "Tyler", medium: "relief print", title: "Saturday", sale: true,
         img: Tyler2 
     },
     {
-        id: 5, artist: "Ewang", medium: "photography", title: "Saturday", sale: true,
+        id: 11, artist: "Tyler", medium: "steel, cast resin", title: "Saturday", sale: true,
         img: Tyler3
     },
     {
-        id: 5, artist: "Elena", medium: "photography", title: "Saturday", sale: true,
+        id: 12, artist: "Ewang", medium: "photograph", title: "Saturday", sale: true,
         img: Ewang2
     },
     {
-        id: 5, artist: "Elena", medium: "photography", title: "Saturday", sale: true,
-        img: Ewang7
+        id: 5, artist: "Ewang", medium: "photograph", title: "Saturday", sale: true,
+        img: Ewang9
     },
     {
-        id: 5, artist: "Elena", medium: "photography", title: "Saturday", sale: true,
+        id: 13, artist: "Ewang", medium: "photograph", title: "Saturday", sale: true,
         img: Ewang3
+    },
+    {
+        id: 14, artist: "Elena", medium: "watercolor", title: "Saturday", sale: true,
+        img: Elena1
+    },
+    {
+        id: 15, artist: "Elena", medium: "watercolor", title: "Saturday", sale: true,
+        img: Elena2
+    },
+    {
+        id: 16, artist: "Elena", medium: "watercolor", title: "Saturday", sale: true,
+        img: Elena3
+    },
+    {
+        id: 17, artist: "Elena", medium: "watercolor", title: "Saturday", sale: true,
+        img: Elena4
     },
 
 ];
