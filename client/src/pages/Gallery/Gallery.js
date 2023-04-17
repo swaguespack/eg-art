@@ -1,7 +1,7 @@
 import React from 'react'
 
 //Components
-import {FeaturedArt} from "../../components";
+import FeaturedArt from "../../components/FeaturedArt";
 
 // Style
 import "./gallery.css"
