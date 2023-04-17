@@ -1,12 +1,12 @@
 import React from "react";
 
-import abstract1 from "../assets/artImgs/abstract1.png";
+import Ewang3 from "../assets/artImgs/Ewang3.png";
 
 const Slides = () => {
 
     return (
 <>
-<img src={abstract1}/>
+<img src={Ewang3}/>
 
 </>
     )
