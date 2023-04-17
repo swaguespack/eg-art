@@ -4,16 +4,16 @@
 } 
 
 .body{
-        background-color: #fdf9ef
+        background-size: cover;
+        background-color: #fdf9ef;
+        margin: 0;
+        min-height: 100vh;
+
+        background-position: 100%;
     
 }
 
-.App {
-    text-align: center;
-    background-color: #f4f1ea;
-    font-family: 'Roboto Condensed',
-        sans-serif;
-}
+
 
 .line-break{
     border: 5px solid rgb(0, 55, 194);
@@ -24,12 +24,13 @@ h2{
                 sans-serif;
 }
 
-.container {
+/* .container {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     text-align: center;
-}
+
+} */
 
 
 .page-header {
@@ -40,6 +41,7 @@ h2{
         color: #011dcb;
         font-family: 'Righteous',
         cursive;
-
+        background-color: white;
         text-shadow: 5px 10px 7px rgb(255, 255, 255);
+        background-size: cover;
 }

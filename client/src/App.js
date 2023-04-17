@@ -65,7 +65,7 @@ function App() {
             className='line-break'
             style={{ color: 'mustard'}}
           />
-          <div className='my-3 py-3 container'>
+          <div className='my-3 py-3 mx-5 px-4'>
             <Routes>
                 <Route path='/' element={<Home />}>
                 </Route>

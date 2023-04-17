@@ -9,17 +9,16 @@ import "./gallery.css"
 
 function SearchBar(){
     return (
-        <form className=''> 
+        <form className='text-start'> 
             <input
             type="text"
             placeholder="Search Artist"
             />
-            <label>
+            <label className='p-3'>
                 <input
                 type="checkbox"
-                
                 />
-                Only show art for sale
+                  Only show art for sale
             </label>
         </form>
     );
@@ -29,7 +28,9 @@ const Gallery = () => {
     return (
         <div className = "gallery-page">
             <h1></h1>
+            <div className='m-4 p-3'>
             <SearchBar />
+            </div>
             <FeaturedArt />
         </div>
     )
