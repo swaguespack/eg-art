@@ -19,7 +19,7 @@ const ArtistCard = () => {
     return(
     <section>
         {artData.map((art) =>   (
-            <Card id="artist-card" key={art.id} className="pt-5 m-3">
+            <Card id="artist-card" key={art._id} className="pt-5 m-3">
                 <Card.Title>{art.artist}</Card.Title>
                 <img
                 className="avatar"

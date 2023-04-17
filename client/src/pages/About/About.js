@@ -1,5 +1,5 @@
 import React from 'react'
-import {Contact} from '../../components/index'
+import Contact from '../../components/Contact'
 // Style
 import {Container, Row, Col} from 'react-bootstrap';
 import "./about.css"
