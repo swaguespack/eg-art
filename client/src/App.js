@@ -26,6 +26,7 @@ import About from "./pages/About/About"
 import Gallery from "./pages/Gallery/Gallery"
 import Login from "./pages/Login/Login"
 import Signup from "./pages/Signup/Signup"
+import SavedArt from './pages/SavedArt/SavedArt';
 
 // Create link to the graphql server using proxy in package.json
 const httpLink = createHttpLink({
@@ -70,6 +71,9 @@ function App() {
                 </Route>
 
                 <Route path="/gallery" element={ <Gallery />}>
+                </Route>
+
+                <Route path="/savedart" element={ <SavedArt/> }>
                 </Route>
 
                 <Route path="/login" element={<Login />}>

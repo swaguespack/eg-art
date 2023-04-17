@@ -35,6 +35,12 @@ if (Auth.loggedIn()){
         </li>
 
         <li className="nav-item">
+          <Link onClick={handleToggle} to="/savedart" className="nav-link" >
+            Saved Art
+          </Link>
+        </li>
+
+        <li className="nav-item">
           <a
             onClick={handleToggle}
             href="https://www.instagram.com/elenagarza.art/"
