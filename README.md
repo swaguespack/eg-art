@@ -7,7 +7,7 @@
 
 Artfolio is an application designed to support local artists. 
 
-![Screenshot](./client/src/assets/sreenshot.png)
+![Screenshot](./client//src/assets/sreenshot.png)
 
 
 ## USER STORY 
@@ -17,9 +17,14 @@ As a supporter of local artists, I want an application that will give users easy
 
 ## TECHNOLOGIES UTILIZED
 
-*Node.js
-*Express
-
+- React
+- Node.js
+- Express
+- MongoDB
+- GraphQL
+- Apollo-server-express
+- @apolloclient
+- jsonwebtoken
 
 ## CREDITS
 
