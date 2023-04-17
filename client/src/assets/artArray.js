@@ -15,4 +15,16 @@ export const ARTS = [
         img: "" },
     { id:5, artist: "Ewang", medium: "photography", title: "Saturday", sale: true,
         img: "" },
+    {
+        id: 5, artist: "Ewang", medium: "photography", title: "Saturday", sale: true,
+        img: ""
+    },
+    {
+        id: 5, artist: "Ewang", medium: "photography", title: "Saturday", sale: true,
+        img: ""
+    },
+    {
+        id: 5, artist: "Ewang", medium: "photography", title: "Saturday", sale: true,
+        img: ""
+    },
 ];

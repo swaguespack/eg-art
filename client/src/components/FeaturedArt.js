@@ -4,26 +4,26 @@ import Card from "react-bootstrap/Card"
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Button from 'react-bootstrap/Button'
-import Art from '../imgs/gallery/abstract.png'
+import Art from '../assets/artImgs/abstract.png'
 
 
 import "../styles/components/card.css"
-// import {ARTS} from "../assets/artArray"
-import {QUERY_ART} from '../utils/queries';
+import {ARTS} from "../assets/artArray"
+// import {QUERY_ART} from '../utils/queries';
 
 
 const FeaturedArt = () => {
-    const {loading, data} = useQuery(QUERY_ART);
-    const artData = data?.arts || [];
+    // const {loading, data} = useQuery(QUERY_ART);
+    // const artData = data?.arts || [];
 
-    if (loading) {
-        return <h3>Loading...</h3>
-    }
+    // if (loading) {
+    //     return <h3>Loading...</h3>
+    // }
 
     return (
         <section id="gallery" className="gallery-container">
             <Row >
-                {artData.map((art) =>(
+                {ARTS.map((art) =>(
                     <Col key={art._id} className="p-4 single">
                         <Card id="art-card" className="m-20" >
                                 <Card.Img variant='top' src={Art} alt={art.alt} className="artImg"/>
