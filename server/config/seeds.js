@@ -8,13 +8,6 @@ db.once('open', async () => {
     await User.deleteMany();
     await Art.deleteMany({});
 
-    await Art.create ({
-        artId: 0,
-        title: 'New Art',
-        artist: 'New Artist',
-        
-    });
-
     await Art.create(artSeeds);
 
     await User.create({
