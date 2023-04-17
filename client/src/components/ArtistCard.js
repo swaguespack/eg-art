@@ -4,8 +4,13 @@ import { ARTS } from "../assets/artArray"
 
 
 export default function ArtistCard () {
-const renderArtistCard = ARTS.map((art, index) =>   
-        <Card id="artist-card">
+    //option to filter artist by their medium
+const photographer = ARTS.filter(art =>
+    art.medium === 'photography');
+
+
+const renderArtistCard = photographer.map((art, index) =>   
+        <Card id="artist-card" key={art.id} className="pt-5 m-3">
             <Card.Title>{art.artist}</Card.Title>
             <img
             className="avatar"
