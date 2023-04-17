@@ -14,7 +14,11 @@ const resolvers = {
           }
 
           throw new AuthenticationError('Not Logged In')
-        }
+        },
+        arts: async (parent, {artId}) => {
+          const params = artId? {artId} : {};
+          return Art.find(params);
+        },
     },
 
     Mutation: {

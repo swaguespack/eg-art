@@ -13,7 +13,7 @@ const typeDefs = gql`
         artId: Int!
         title: String
         artist: String!
-        medium: [String]
+        medium: String
         image: String
         link: String
     }
@@ -27,7 +27,7 @@ const typeDefs = gql`
         artId: Int!
         title: String
         artist: String!
-        medium: [String]
+        medium: String
         image: String
         link: String
     }
@@ -35,6 +35,7 @@ const typeDefs = gql`
       
     type Query {
         me: User
+        arts(artId: Int): [Art]
     }
 
     type Mutation {
