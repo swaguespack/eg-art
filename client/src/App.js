@@ -28,6 +28,7 @@ import Login from "./pages/Login/Login"
 import Signup from "./pages/Signup/Signup"
 import SavedArt from './pages/SavedArt/SavedArt';
 
+
 // Create link to the graphql server using proxy in package.json
 const httpLink = createHttpLink({
   uri: '/graphql',

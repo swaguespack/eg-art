@@ -4,32 +4,31 @@ import Card from "react-bootstrap/Card"
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Button from 'react-bootstrap/Button'
-import Art from '../imgs/gallery/abstract.png'
-
 
 import "../styles/components/card.css"
-// import {ARTS} from "../assets/artArray"
-import {QUERY_ART} from '../utils/queries';
+import {ARTS} from "../assets/artArray"
+// import {QUERY_ART} from '../utils/queries';
 
 
 const FeaturedArt = () => {
-    const {loading, data} = useQuery(QUERY_ART);
-    const artData = data?.arts || [];
+    
+    // const {loading, data} = useQuery(QUERY_ART);
+    // const artData = data?.arts || [];
 
-    if (loading) {
-        return <h3>Loading...</h3>
-    }
+    // if (loading) {
+    //     return <h3>Loading...</h3>
+    // }
 
     return (
         <section id="gallery" className="gallery-container">
             <Row >
-                {artData.map((art) =>(
+                {ARTS.map((art) =>(
                     <Col key={art._id} className="p-4 single">
                         <Card id="art-card" className="m-20" >
-                                <Card.Img variant='top' src={Art} alt={art.alt} className="artImg"/>
+                            <Card.Img key={art._id} variant='top' src={art.img} alt={art.alt} className="artImg"/>
                                 <Card.Body className="card-body">
                                     <Card.Title className="card-title">{art.title}</Card.Title>
-                                    <Card.Text className="card-text">{art.description}{art.medium}</Card.Text>
+                                    <Card.Text className="card-text">{art.artist}{art.medium}</Card.Text>
                                     <Button className="m-2 p-2 btn-dark">Save</Button>
                                 </Card.Body>
                             
