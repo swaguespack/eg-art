@@ -3,6 +3,27 @@
     box-sizing: border-box;
 } 
 
+.body{
+        background-color: #fdf9ef
+    
+}
+
+.App {
+    text-align: center;
+    background-color: #f4f1ea;
+    font-family: 'Roboto Condensed',
+        sans-serif;
+}
+
+.line-break{
+    border: 5px solid rgb(0, 55, 194);
+
+}
+h2{
+        font-family: 'Roboto Condensed',
+                sans-serif;
+}
+
 .container {
     min-height: 100vh;
     display: flex;
@@ -19,5 +40,5 @@
         color: #011dcb;
         font-family: 'Righteous',
         cursive;
-        text-shadow: 5px 5px 10px rgb(255, 255, 255);
+        text-shadow: 2px 2px 7px rgb(214, 214, 31);
 }

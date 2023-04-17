@@ -26,6 +26,7 @@ import About from "./pages/About/About"
 import Gallery from "./pages/Gallery/Gallery"
 import Login from "./pages/Login/Login"
 import Signup from "./pages/Signup/Signup"
+import SavedArt from './pages/SavedArt/SavedArt';
 
 // Create link to the graphql server using proxy in package.json
 const httpLink = createHttpLink({
@@ -55,12 +56,15 @@ function App() {
     <ApolloProvider client={client}>
     <BrowserRouter>
 
-      <div>
+      <div className='body'>
         <header className="my-3 pt-5 px-3 page-header">
           <h1 className='display-1'>artfolio</h1>
         </header>
         <Navigation />
-
+          <hr
+            className='line-break'
+            style={{ color: 'mustard'}}
+          />
           <div className='my-3 py-3 container'>
             <Routes>
                 <Route path='/' element={<Home />}>
@@ -70,6 +74,9 @@ function App() {
                 </Route>
 
                 <Route path="/gallery" element={ <Gallery />}>
+                </Route>
+
+                <Route path="/savedart" element={ <SavedArt/> }>
                 </Route>
 
                 <Route path="/login" element={<Login />}>

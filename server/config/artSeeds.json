@@ -1,0 +1,84 @@
+[
+    { 
+        "artId": 0, 
+        "artist": "Yuki", 
+        "medium": "ink", 
+        "title": "KibbleLyf", 
+        "sale": true,
+        "img": "",
+        "savedArt": ""
+    },
+    {
+        "artId": 1,
+        "artist": "Kona",
+        "medium": "oil paint",
+        "title": "Southward Paw",
+        "sale": true,
+        "img": "",
+        "savedArt": ""
+    },
+    {
+        "artId": 2,
+        "artist": "Tyler",
+        "medium": "sculpture",
+        "title": "Hand of Time",
+        "sale": false,
+        "img": "",
+        "savedArt": ""
+    },
+    {
+        "artId": 3,
+        "artist": "Shelby",
+        "medium": "photography",
+        "title": "Lions Mane",
+        "sale": false,
+        "img": "",
+        "savedArt": ""
+    },
+    {
+        "artId": 4,
+        "artist": "Mika",
+        "medium": "cyanotype",
+        "title": "Celestial Bodies",
+        "sale": true,
+        "img": "",
+        "savedArt": ""
+    },
+    {
+        "artId": 5,
+        "artist": "Ewang",
+        "medium": "photography",
+        "title": "ATL",
+        "sale": true,
+        "img": "",
+        "savedArt": ""
+    },
+    {
+        "artId": 6,
+        "artist": "Ewang",
+        "medium": "photography",
+        "title": "Signs",
+        "sale": true,
+        "img": "",
+        "savedArt": ""
+    },
+    {
+        "artId": 7,
+        "artist": "Shelby",
+        "medium": "watercolor",
+        "title": "Busy Bee",
+        "sale": true,
+        "img": "",
+        "savedArt": ""
+    },
+    {
+        "artId": 8,
+        "artist": "Tyler",
+        "medium": "oil paint",
+        "title": "Snow Leopard",
+        "sale": false,
+        "img": "",
+        "savedArt": ""
+    }
+
+]

@@ -22,7 +22,12 @@ const userSchema = new Schema(
       required: true,
     },
     // Set savedArt to be an array of data that adheres to the artSchema
-    // savedArt: [artSchema],
+    savedArt: [
+      {
+      type: Schema.Types.ObjectId,
+      ref: 'Art'
+      }
+    ]
   },
   // Set this to use virtual below
   {

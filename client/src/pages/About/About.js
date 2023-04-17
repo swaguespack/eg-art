@@ -1,5 +1,5 @@
 import React from 'react'
-import {Contact} from '../../components/index'
+import Contact from '../../components/Contact'
 // Style
 import {Container, Row, Col} from 'react-bootstrap';
 import "./about.css"
@@ -13,8 +13,11 @@ const About = () => {
         <Row xs={1} sm={1} md={2} className='g-4'>
             <Col className='bg-light p-4'>
                 <h1>Meet the Artist</h1>
-                <ArtistCard/>
+                <div className='p-2 m-1'>
+                    <ArtistCard/>
+                </div>
             </Col> 
+
             <Col>
                 <h1>Contact</h1>
                 <Contact/>

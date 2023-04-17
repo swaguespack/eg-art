@@ -15,9 +15,9 @@ const resolvers = {
 
           throw new AuthenticationError('Not Logged In')
         },
-
-        arts: async()=> {
-          return Art.find().sort({ createdAt: -1 });
+        arts: async (parent, {artId}) => {
+          const params = artId? {artId} : {};
+          return Art.find(params);
         },
     },
 
@@ -45,6 +45,17 @@ const resolvers = {
             }
             const token = signToken(user);
             return {token, user};
+        },
+        saveArt: async (parent, {artId}, context) => {
+          if(context.user) {
+            const updatedUser = await User.findOneAndUpdate(
+              {_id: context.user._id},
+              {$push: {savedArt: artId}},
+              {new: true, runValidators: true}
+            );
+            return updatedUser;
+          }
+          throw new AuthenticationError('Unable to save art.')
         }
     }
 };

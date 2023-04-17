@@ -15,10 +15,13 @@ export const QUERY_ART = gql`
 {
   arts {
     title
-    artist
-    _id
-    image
     link
+    image
+    artist
+    artId
+    _id
+    medium
+    sale
   }
 }
 `;
