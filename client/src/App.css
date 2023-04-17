@@ -40,5 +40,6 @@ h2{
         color: #011dcb;
         font-family: 'Righteous',
         cursive;
-        text-shadow: 2px 2px 7px rgb(214, 214, 31);
+
+        text-shadow: 5px 10px 7px rgb(255, 255, 255);
 }
