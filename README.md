@@ -7,7 +7,7 @@
 
 Artfolio is an application designed to support local artists. 
 
-![Screenshot](./client/public/client/src/imgs/)
+![Screenshot](./client/src/assets/sreenshot.png)
 
 
 ## USER STORY 
