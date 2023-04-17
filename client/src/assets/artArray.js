@@ -24,73 +24,71 @@ import Elena4 from './artImgs/Elana4.png';
 
 
 export const ARTS = [
-    {   id:0, artist: "Eddie", medium: "leds, plastic, wire", title: "", sale: true,
+    {   id:0, artist: "Eddie", medium: "leds, plastic, wire", title: "Reflection", sale: true,
         img:Eddie1,
     },
-    {   id:1, artist: "Eddie", medium: "memory cards, hard drives, lightbulbs, wire", title: "Southward Paw", sale: false,
+    {   id:1, artist: "Eddie", medium: "memory cards, hard drives, lightbulbs, wire", title: "Rain", sale: false,
         img: Eddie2
     },
-    {   id:2, artist: "Eddie", medium: "led globe lights, arduino, wire, wood", title: "Celestial Bodies", sale: true,
+    {   id:2, artist: "Eddie", medium: "led globe lights, arduino, wire, wood", title: "Brain", sale: true,
         img: Eddie3 
     },
-    {   id:3, artist: "Eddie", medium: "sculpture", title: "Hand of Time", sale: true,
+    {
+        id: 3, artist: "Eddie", medium: "led globe lights, arduino, wire, wood", title: "Brain", sale: true,
         img: Eddie4 
     },
-    {   id:4, artist: "Ewang", medium: "photograph", title: "ATL", sale: false, 
+    {   id:4, artist: "Ewang", medium: "photograph", title: "Moreland Package", sale: false, 
         img: Ewang1 
     },
-    {   id:5, artist: "Ewang", medium: "photograph", title: "Saturday", sale: true,
+    {   id:5, artist: "Ewang", medium: "photograph", title: "nyc", sale: true,
         img: Ewang2 },
     {
-        id: 6, artist: "Ewang", medium: "photograph", title: "Saturday", sale: true,
+        id: 6, artist: "Ewang", medium: "photograph", title: "Atlanta Motel", sale: true,
         img: Ewang3
     },
     {
-        id: 7, artist: "Ewang", medium: "photograph", title: "Saturday", sale: true,
+        id: 7, artist: "Ewang", medium: "photograph", title: "Made on Earth", sale: true,
         img:  Ewang6 
     },
     {
-        id: 8, artist: "Ewang", medium: "photograph", title: "Saturday", sale: true,
+        id: 8, artist: "Ewang", medium: "photograph", title: "Made on Earth", sale: true,
         img: Ewang8
     },
     {
-        id: 9, artist: "Ewang", medium: "photograph", title: "Saturday", sale: true,
+        id: 9, artist: "Ewang", medium: "photograph", title: "Untitled", sale: true,
         img: Tyler1
     },
     {
-        id: 10, artist: "Tyler", medium: "relief print", title: "Saturday", sale: true,
+        id: 10, artist: "Tyler", medium: "relief print", title: "Earth", sale: true,
         img: Tyler2 
     },
     {
-        id: 11, artist: "Tyler", medium: "steel, cast resin", title: "Saturday", sale: true,
+        id: 11, artist: "Tyler", medium: "steel, cast resin", title: "Full Circle", sale: true,
         img: Tyler3
     },
+ 
     {
         id: 12, artist: "Ewang", medium: "photograph", title: "Saturday", sale: true,
-        img: Ewang2
-    },
-    {
-        id: 5, artist: "Ewang", medium: "photograph", title: "Saturday", sale: true,
         img: Ewang9
     },
     {
-        id: 13, artist: "Ewang", medium: "photograph", title: "Saturday", sale: true,
-        img: Ewang3
+        id: 13, artist: "Ewang", medium: "photograph", title: "Made on Earth", sale: true,
+        img: Ewang7
     },
     {
-        id: 14, artist: "Elena", medium: "watercolor", title: "Saturday", sale: true,
+        id: 14, artist: "Elena", medium: "watercolor", title: "Abstract", sale: true,
         img: Elena1
     },
     {
-        id: 15, artist: "Elena", medium: "watercolor", title: "Saturday", sale: true,
+        id: 15, artist: "Elena", medium: "watercolor", title: "Abstract", sale: true,
         img: Elena2
     },
     {
-        id: 16, artist: "Elena", medium: "watercolor", title: "Saturday", sale: true,
+        id: 16, artist: "Elena", medium: "watercolor", title: "Abstract", sale: true,
         img: Elena3
     },
     {
-        id: 17, artist: "Elena", medium: "watercolor", title: "Saturday", sale: true,
+        id: 17, artist: "Elena", medium: "watercolor", title: "Abstract", sale: true,
         img: Elena4
     },
 
