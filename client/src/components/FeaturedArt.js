@@ -1,12 +1,14 @@
 import React from "react";
-
-import "../styles/components/artGallery.css"
-import "../styles/components/card.css"
-import {ARTS} from "../assets/artArray"
 import Card from "react-bootstrap/Card"
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Button from 'react-bootstrap/Button'
+
+
+import "../styles/components/artGallery.css"
+import "../styles/components/card.css"
+import {ARTS} from "../assets/artArray"
+
 
 
 // function FilterableGalleryTable({arts}){

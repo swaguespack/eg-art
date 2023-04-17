@@ -25,7 +25,10 @@ const artSchema = new Schema({
   },
   link: {
     type: String,
-  }
+  },
+  sale: {
+    type: Boolean,
+  },
 });
 
 const Art = model('Art', artSchema);

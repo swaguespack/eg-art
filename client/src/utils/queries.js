@@ -21,6 +21,7 @@ export const QUERY_ART = gql`
     artId
     _id
     medium
+    sale
   }
 }
 `;

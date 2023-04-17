@@ -16,6 +16,7 @@ const typeDefs = gql`
         medium: String
         image: String
         link: String
+        sale: Boolean
     }
 
     type Auth {
@@ -30,6 +31,7 @@ const typeDefs = gql`
         medium: String
         image: String
         link: String
+        sale: Boolean
     }
     
       
