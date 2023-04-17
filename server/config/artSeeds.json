@@ -1,0 +1,84 @@
+[
+    { 
+        "artId": 0, 
+        "artist": "Yuki", 
+        "medium": "ink", 
+        "title": "KibbleLyf", 
+        "sale": true,
+        "img": "",
+        "savedArt": ""
+    },
+    {
+        "artId": 1,
+        "artist": "Yuki",
+        "medium": "ink",
+        "title": "KibbleLyf",
+        "sale": true,
+        "img": "",
+        "savedArt": ""
+    },
+    {
+        "artId": 2,
+        "artist": "Yuki",
+        "medium": "ink",
+        "title": "KibbleLyf",
+        "sale": true,
+        "img": "",
+        "savedArt": ""
+    },
+    {
+        "artId": 3,
+        "artist": "Yuki",
+        "medium": "ink",
+        "title": "KibbleLyf",
+        "sale": true,
+        "img": "",
+        "savedArt": ""
+    },
+    {
+        "artId": 4,
+        "artist": "Yuki",
+        "medium": "ink",
+        "title": "KibbleLyf",
+        "sale": true,
+        "img": "",
+        "savedArt": ""
+    },
+    {
+        "artId": 5,
+        "artist": "Yuki",
+        "medium": "ink",
+        "title": "KibbleLyf",
+        "sale": true,
+        "img": "",
+        "savedArt": ""
+    },
+    {
+        "artId": 6,
+        "artist": "Yuki",
+        "medium": "ink",
+        "title": "KibbleLyf",
+        "sale": true,
+        "img": "",
+        "savedArt": ""
+    },
+    {
+        "artId": 7,
+        "artist": "Yuki",
+        "medium": "ink",
+        "title": "KibbleLyf",
+        "sale": true,
+        "img": "",
+        "savedArt": ""
+    },
+    {
+        "artId": 8,
+        "artist": "Yuki",
+        "medium": "ink",
+        "title": "KibbleLyf",
+        "sale": true,
+        "img": "",
+        "savedArt": ""
+    }
+
+]
