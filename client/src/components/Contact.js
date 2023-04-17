@@ -16,26 +16,28 @@ const Contact = () => {
 
     return(
 
-            <Form onSubmit={handleSubmit}
-
-            >
+            <Form className="p-4" onSubmit={handleSubmit}>
+                
                 <Form.Group className="mb-3" controlId="form.Name">
                     <Form.Label>Name</Form.Label>
                     <Form.Control type="text" placeholder="Enter name" />
                 </Form.Group>
+               
                 <Form.Group controlId="form.Email">
                     <Form.Label>Email address</Form.Label>
                     <Form.Control type="email" placeholder="name@example.com" />
                 </Form.Group>
+                
                 <Form.Group controlId="form.Textarea">
                     <Form.Label>Message</Form.Label>
                     <Form.Control as="textarea" rows={3} />
                 </Form.Group>
-                <Button variant='primary' type='submit'>
-                    Send
+                
+                <Button variant='primary' type='submit' className="mt-4">
+                    Send 
                 </Button>
+           
             </Form>
-
 
 )
 };

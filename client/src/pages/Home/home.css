@@ -1,8 +1,6 @@
 .home-page {
-    padding: 20px;
-    height: 600px;
-    background-position: center;
-    background-size: cover;
-    min-height: 40vh;
-    flex-direction: column;
+    display: flex;
+
+    justify-content: center;
+    border-style: dashed;
   }

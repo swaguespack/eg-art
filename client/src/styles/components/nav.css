@@ -1,22 +1,19 @@
 /* Navbar style */
 
-#logo{
-    height: 50px;
-    margin: 20px;
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(135, 131, 6, 0.622);
 }
 
 .nav-menu {
     display: flex;
     align-items: center;
     gap: 1.25rem;
-    margin: 20px;
-  }
-
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    min-height: 70px;
+    margin: 10px;
+    padding-right: 3rem;
+    font-size:x-large;
   }
 
   nav ul{
@@ -50,6 +47,8 @@
     background-color: black;
   }
 
+
+  
   /* Media Queries */
 
 @media (max-width: 768px) {
@@ -70,12 +69,12 @@
     transform: translateY(-8px) rotate(-45deg);
   }
 
-  .navbar {
+  /* .navbar {
     padding: 0 24px 0 4px;
     position: fixed;
     width: 100vw;
     top: 0;
-  }
+  } */
 
   .nav-menu {
     position: fixed;

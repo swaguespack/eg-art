@@ -1,11 +1,12 @@
 import React from "react";
 
 import "../styles/components/artGallery.css"
-
-import {arts} from "../utils/artData"
+import "../styles/components/card.css"
+import {ARTS} from "../assets/artArray"
 import Card from "react-bootstrap/Card"
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
+import Button from 'react-bootstrap/Button'
 
 
 // function FilterableGalleryTable({arts}){
@@ -16,35 +17,19 @@ import Col from 'react-bootstrap/Col'
 //     );
 // }
 
-// function SearchBar(){
-//     return (
-//         <form>
-//             <input
-//             type="text"
-//             placeholder="Search Artist"
-//             />
-//             <label>
-//                 <input
-//                 type="checkbox"
-                
-//                 />
-//                 Only show art for sale
-//             </label>
-//         </form>
-//     );
-// }
 
 export default function FeaturedArt(){
     return (
         <section id="gallery" className="gallery-container">
             <Row>
-                {arts.map((art) =>(
-                    <Col className="single">
-                        <Card id="art-card" key={art.id}>
-                                <Card.Img variant='top' src={art.image} alt={art.alt} className="artimg"/>
-                                <Card.Body>
-                                    <Card.Title>{art.title}</Card.Title>
-                                    <Card.Text>{art.description}</Card.Text>
+                {ARTS.map((art) =>(
+                    <Col  className="p-4 single">
+                        <Card id="art-card" className="m-20" key={art.id}>
+                                <Card.Img variant='top' src={art.image} alt={art.alt} className="artImg"/>
+                                <Card.Body className="card-body">
+                                    <Card.Title className="card-title">{art.title}</Card.Title>
+                                    <Card.Text className="card-text">{art.description}{art.medium}</Card.Text>
+                                    <Button className="m-2 p-2 btn-dark">Save</Button>
                                 </Card.Body>
                             
                         </Card>

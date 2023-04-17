@@ -5,9 +5,6 @@ import Auth from '../utils/auth';
 // Style
 import "../styles/components/nav.css";
 
-// Placeholder for logo
-import Logo from "../imgs/Home/elenagarza.png";
-
 function Navigation(){
   // Hamburger nav is active
   const [isActive, setActive] = useState("false");
@@ -70,10 +67,8 @@ if (Auth.loggedIn()){
 
     <nav className="navbar">
 
-      <Link to="/">          
-
-        <img id="logo" src={Logo} alt="@ elena garza" />
-        
+      <Link to="/">         
+       
       </Link>
       <ul className={`nav-menu ${isActive ? "" : "active"}`}>
 

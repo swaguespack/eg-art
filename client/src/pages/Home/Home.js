@@ -1,27 +1,26 @@
 import React from 'react'
+import {Container, Row, Col, Card} from 'react-bootstrap'
 
 // Style
 import "./home.css"
 
 const Home = () => {
     return (
-        <main className='home-page'>
-            <div className='flex-row justify-center'>
-                <div
-                    className='col-12 col-md-10 mb-3 p-3'
-                    style={{ border: '1px dotted' }}
-                >
+        <Container className='home-page'>
+
+                <Col>
+                    <Card border="dark" className='mt-3 p-5'> 
                     <h3>Description of Application</h3>
                     <p>All the Text to describe this application.</p>
-                </div>
-                <div className='flex-row justify-center align-center'>
-                    <div className='col-12 col-md-8 mb-3'>
+                    </Card>
+                </Col>
+                <Col >
+                    <Card className='p-5'>
+                        featured art
+                    </Card>
+                </Col>
 
-                    </div>
-                </div>
-
-            </div>
-        </main>
+        </Container>
     )
 }
-export default Home
+export default Home;
