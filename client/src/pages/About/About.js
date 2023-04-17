@@ -3,6 +3,8 @@ import {Contact} from '../../components/index'
 // Style
 import {Container, Row, Col} from 'react-bootstrap';
 import "./about.css"
+import "../../components/ArtistCard"
+import ArtistCard from '../../components/ArtistCard';
 
 const About = () => {
     return (    
@@ -11,6 +13,7 @@ const About = () => {
         <Row xs={1} sm={1} md={2} className='g-4'>
             <Col className='bg-light p-4'>
                 <h1>Meet the Artist</h1>
+                <ArtistCard/>
             </Col> 
             <Col>
                 <h1>Contact</h1>
@@ -21,4 +24,5 @@ const About = () => {
 </>
     )
 }
-export default About
+
+export default About;
