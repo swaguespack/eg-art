@@ -4,15 +4,17 @@
 } 
 
 .body{
-        background-size: cover;
-        background-color: #fdf9ef;
-        margin: 0;
-        min-height: 100vh;
+    background-color: #fdf9ef;
+    min-height: 100vh;
 
-        background-position: 100%;
-    
 }
 
+.App {
+    text-align: center;
+    background-color: #f4f1ea;
+    font-family: 'Roboto Condensed',
+        sans-serif;
+}
 
 
 .line-break{
@@ -24,13 +26,12 @@ h2{
                 sans-serif;
 }
 
-/* .container {
-    min-height: 100vh;
+.container {
     display: flex;
     flex-direction: column;
     text-align: center;
 
-} */
+}
 
 
 .page-header {
@@ -43,5 +44,4 @@ h2{
         cursive;
         background-color: white;
         text-shadow: 5px 10px 7px rgb(255, 255, 255);
-        background-size: cover;
 }

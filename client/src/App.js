@@ -57,7 +57,7 @@ function App() {
     <BrowserRouter>
 
       <div className='body'>
-        <header className="my-3 pt-5 px-3 page-header">
+        <header className="my-3 pt-5 page-header">
           <h1 className='display-1'>artfolio</h1>
         </header>
         <Navigation />
@@ -65,7 +65,7 @@ function App() {
             className='line-break'
             style={{ color: 'mustard'}}
           />
-          <div className='my-3 py-3 mx-5 px-4'>
+          <div className='my-3 py-3 container'>
             <Routes>
                 <Route path='/' element={<Home />}>
                 </Route>
