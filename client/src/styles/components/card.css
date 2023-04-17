@@ -1,14 +1,11 @@
-.gallery-container {
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    max-width: 1120px;
-}
+
 
 #art-card {
     margin-bottom: 24px;
     border-radius: 10px;
     box-shadow: -5px 12px 15px rgba(32, 25, 22, 0.638);
+    min-width: 300px;
+    position:relative;
 }
 
 #art-card:hover {

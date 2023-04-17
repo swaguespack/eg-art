@@ -57,7 +57,7 @@ function App() {
     <BrowserRouter>
 
       <div className='body'>
-        <header className="my-3 pt-5 px-3 page-header">
+        <header className="my-3 pt-5 page-header">
           <h1 className='display-1'>artfolio</h1>
         </header>
         <Navigation />
