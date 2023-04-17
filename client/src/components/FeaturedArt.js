@@ -2,7 +2,7 @@ import React from "react";
 
 import "../styles/components/artGallery.css"
 import "../styles/components/card.css"
-import {arts} from "../utils/artData"
+import {ARTS} from "../assets/artArray"
 import Card from "react-bootstrap/Card"
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
@@ -22,13 +22,13 @@ export default function FeaturedArt(){
     return (
         <section id="gallery" className="gallery-container">
             <Row>
-                {arts.map((art) =>(
+                {ARTS.map((art) =>(
                     <Col  className="p-4 single">
                         <Card id="art-card" className="m-20" key={art.id}>
                                 <Card.Img variant='top' src={art.image} alt={art.alt} className="artImg"/>
                                 <Card.Body className="card-body">
                                     <Card.Title className="card-title">{art.title}</Card.Title>
-                                    <Card.Text className="card-text">{art.description}</Card.Text>
+                                    <Card.Text className="card-text">{art.description}{art.medium}</Card.Text>
                                     <Button className="m-2 p-2 btn-dark">Save</Button>
                                 </Card.Body>
                             
