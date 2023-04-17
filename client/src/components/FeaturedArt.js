@@ -27,9 +27,20 @@ const FeaturedArt = () => {
                         <Card id="art-card" className="m-20" >
                             <Card.Img key={art._id} variant='top' src={art.img} alt={art.alt} className="artImg"/>
                                 <Card.Body className="card-body">
-                                    <Card.Title className="card-title">{art.title}</Card.Title>
-                                    <Card.Text className="card-text">{art.artist}{art.medium}</Card.Text>
+                                        <p>
+                                        <Card.Title className="card-title">
+                                        <h4>{art.title}</h4>
+                                        </Card.Title>
+                                        </p>
+                                        <div>
+                                    <Card.Text className="card-text">
+                                        <p>{art.artist}</p>
+                                        <p>{art.medium}</p>
+                                        </Card.Text>
+                                       </div>
+                                    <div>
                                     <Button className="m-2 p-2 btn-dark">Save</Button>
+                                    </div>
                                 </Card.Body>
                             
                         </Card>

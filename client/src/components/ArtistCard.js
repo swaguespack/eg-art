@@ -24,14 +24,14 @@ const ArtistCard = () => {
     <section>
         {Elena.map((art) =>   (
             <Card id="artist-card" key={art._id} className="pt-5 m-3">
-                <Card.Title>{art.artist}</Card.Title>
+                <Card.Title className="fs-3">{art.artist}</Card.Title>
                 <img
                 className="avatar"
                 src={art.img}
                 alt={art.alt}
                 />
                 <Card.Body>
-                    <Card.Text>{art.description}{art.medium}</Card.Text>
+                    <Card.Text>{art.title}</Card.Text>
                 </Card.Body>
             </Card>
         ))}
