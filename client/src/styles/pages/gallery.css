@@ -11,4 +11,9 @@
     background-position: center;
     min-height: 40vh;
    flex-direction: column;
+  }  
+
+  h1{
+    font-family: 'Rubik Mono One', sans-serif;
+    text-shadow: 2px 2px 5px rgb(74, 49, 20);
   }
